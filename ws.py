@@ -58,11 +58,19 @@ def localhost():
      text=text.replace('quantum.com', 'localhost')
      text=text.replace('ServerAlias quantum.org.bd', '#ServerAlias quantum.org.bd')
      file_out= open ("/etc/apache2/vhosts.d/_default.conf", 'w').write(text)
-     
-     
-     
-     
-     
+def directory():
+    print "gias"
+    #if not os.path.exists(/srv/www/vhosts):
+        #os.makedirs(/srv/www/vhosts)
+    #os.makedirs((os.path.join(os.environ['Desktop'], 'py', 'src')) 
+    subprocess.call(["mkdir", "/srv/www/vhosts/quantum.com", "-p", "755"])
+    file_index_html=open('/srv/www/vhosts/quantum.com/index.html', 'w')
+    index_code='<html> it works \n </html>'
+    file_index_html.write(index_code)
+    
+     #info_code = '<?php\nphpinfo();\n?>'
+    #file_info_php.write(info_code)
+    
 
     
     
@@ -78,6 +86,7 @@ if __name__ == "__main__":
     #main()
     #cmdtest(False)
     #fileedit()
-    localhost()
+    #localhost()
+    directory()
     
 
